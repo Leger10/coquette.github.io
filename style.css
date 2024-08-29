@@ -317,6 +317,72 @@ main {
     background: #e88c1f;
     transform: scale(1.05);
 }
+/* Styles généraux pour la section de formation */
+.formation {
+    padding: 20px;
+    background-color: #f8f8f8; /* Couleur de fond légère */
+}
+
+/* Styles pour le titre de la section */
+.formation .titre {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.formation .titre h2 {
+    font-size: 2em; /* Taille de police pour les écrans plus grands */
+    color: darksalmon;
+}
+
+.formation .titre .titre-texte {
+    font-size: 1.2em; /* Ajuster si nécessaire */
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.formation .imbox {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.formation .imbox img {
+    max-width: 100%; /* Assurer que l'image ne dépasse pas la largeur du conteneur */
+    height: auto; /* Conserver les proportions de l'image */
+    border-radius: 8px; /* Ajouter des coins arrondis si désiré */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajouter une ombre légère */
+}
+
+/* Styles pour le bouton */
+.formation .btn1 {
+    display: inline-block;
+    background-color: #fb911f;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+}
+
+.formation .btn1:hover {
+    background-color: #fff;
+    color: #fb911f;
+    border: 2px solid #fb911f;
+    transform: scale(1.05);
+}
+
+/* Styles pour les écrans mobiles */
+@media (max-width: 768px) {
+    .formation .titre h2 {
+        font-size: 1.5em; /* Réduire la taille de police sur les petits écrans */
+    }
+
+    .formation .titre .titre-texte {
+        font-size: 1em; /* Réduire la taille de police pour le texte */
+    }
+}
 
 /* Style pour la section témoignages */
 /* Style pour la section des témoignages */
@@ -723,66 +789,102 @@ body {
     }
     
     /* Sticky header styles */
-    header.sticky {
-        background: #fff;
-        filter: invert(0);
-    }
-    
-    /* Menu button styles */
-    .menutoggle {
-        position: relative;
-        width: 35px; /* Reduced size for smaller screens */
-        height: 35px;
-        background-image: url('./Capture d’écran 2024-08-20 030904.png');
-        background-repeat: no-repeat;
-        background-position: center;
-        cursor: pointer;
-    }
-    
-    /* Active menu button styles */
-    .menutoggle.active {
-        background-image: url('./image/close.png');
-        background-size: 25px; /* Reduced size for smaller screens */
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-    
-    /* Navigation bar styles */
-    .navbar {
-        display: flex;
-        justify-content: center;
-        transition: max-height 0.3s ease;
-        background: #fff;
-    }
-    
-    /* Navigation list styles */
-    .navbar ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column; /* Stack menu items vertically on small screens */
-        align-items: center;
-    }
-    
-    /* List item styles in the navigation bar */
-    .navbar ul li {
-        margin: 10px 0; /* Add vertical space between menu items */
-    }
-    
-    /* Link styles in the navigation bar */
-    .navbar ul li a {
-        color: #333;
-        text-decoration: none;
-        padding: 10px;
-        font-size: 1em; /* Ensure readability */
-    }
-    
-    /* Active navigation bar styles */
-    .navbar.active {
-        max-height: 100vh; /* Full screen for active navigation */
-    }
-    
+    /* Styles pour l'en-tête */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles pour le logo */
+.logo {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+/* Styles pour le bouton de menu */
+.menutoggle {
+    width: 30px;
+    height: 30px;
+    background-image: url('./menu-icon.png'); /* Icône du menu */
+    background-size: cover;
+    cursor: pointer;
+}
+
+/* Styles pour le menu de navigation */
+.navbar {
+    display: none; /* Caché par défaut */
+    position: fixed;
+    top: 50px; /* Ajuster selon la hauteur de l'en-tête */
+    right: 0;
+    background-color: #333;
+    width: 100%;
+    height: calc(100vh - 50px); /* Ajuster la hauteur pour le menu complet */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+/* Styles lorsque le menu est actif */
+.navbar.active {
+    display: flex;
+}
+
+/* Styles pour les éléments du menu */
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.navbar ul li {
+    margin: 15px 0;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover {
+    color: #fb911f;
+}
+
+/* Styles pour les boutons de réservation */
+.btn-reserve {
+    background-color: #fb911f;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 5px 0; /* Réduit l'espace vertical entre les boutons */
+    transition: all 0.3s ease;
+}
+
+.btn-reserve:hover {
+    background-color: #fff;
+    color: #fb911f;
+    border: 2px solid #fb911f;
+    transform: scale(1.05);
+}
+
     section {
         padding: 15px; /* Adjust padding for smaller screens */
         margin: 10px 0;

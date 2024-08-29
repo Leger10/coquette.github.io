@@ -11,19 +11,20 @@
     <title>Salon de coiffure la Coquette du Faso</title>
 </head>
 
-<header class="header" >
-  <a href="#" class="logo"><span>Coquette</span> du FASO</a>
-  <div class="menutoggle"  onclick="toggleMenu();"></div>
-  <ul class="navbar">
-      <li><a href="#banniere" onclick="menutoggle();">Accueil</a></li>
-      <li><a href="#apropos" onclick="menutoggle();">À propos</a></li>
-      <li><a href="#menu" onclick="menutoggle();">Menu</a></li>
-      <li><a href="#service" onclick="menutoggle();">Services</a></li>
-      <li><a href="#témoignage" onclick="menutoggle();">Témoignages</a></li>
-      <li><a href="#contact" class="btn-reserve" onclick="menutoggle();">Contactez-nous</a></li>
-      <li><a href="#contact-form" class="btn-reserve" onclick="menutoggle();">Réservation</a></li>
-  </ul>
-</header>
+<header class="header">
+    <a href="#" class="logo"><span>Coquette</span> du FASO</a>
+    <div class="menutoggle" onclick="toggleMenu();"></div>
+    <ul class="navbar">
+        <li><a href="#banniere" onclick="menutoggle();">Accueil</a></li>
+        <li><a href="#apropos" onclick="menutoggle();">À propos</a></li>
+        <li><a href="#menu" onclick="menutoggle();">Menu</a></li>
+        <li><a href="#service" onclick="menutoggle();">Services</a></li>
+        <li><a href="#témoignage" onclick="menutoggle();">Témoignages</a></li>
+        <li><a href="#contact" class="btn-reserve" onclick="menutoggle();">Contactez-nous</a></li>
+        <li><a href="#contact-form" class="btn-reserve" onclick="menutoggle();">Réservation</a></li>
+    </ul>
+  </header>
+  
 
 
 <section class="banniere" id="banniere">
@@ -677,11 +678,18 @@
     header.classList.toggle('sticky', window.scrollY > 0);
 });
 
-function menutoggle() { 
+function toggleMenu() { 
     const menutoggle = document.querySelector('.menutoggle');
     const navbar = document.querySelector('.navbar');
     menutoggle.classList.toggle('active');
     navbar.classList.toggle('active');
+}
+
+function menutoggle() {
+    const navbar = document.querySelector('.navbar');
+    if (navbar.classList.contains('active')) {
+        toggleMenu(); // Ferme le menu si ouvert
+    }
 }
 </script>
 
