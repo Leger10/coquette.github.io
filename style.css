@@ -7,19 +7,19 @@ body, html {
     line-height: 1.6;
 }
 
-/* Styles pour le paragraphe */
-.p {
+/* General Styles */
+p {
     font-weight: 300;
     color: #111;
 }
 
-/* Styles pour l'en-tête fixe */
+/* Fixed Header Styles */
 .header {
     position: fixed;
     font-size: 1em;
     top: 0;
     left: 0;
-    padding: 20px 10px;
+    padding: 15px 10px; /* Adjusted padding for mobile */
     width: 100%;
     z-index: 1;
     display: flex;
@@ -29,11 +29,11 @@ body, html {
     transition: 0.5s;
 }
 
-/* Styles pour le logo */
+/* Logo Styles */
 .logo {
     color: #fff;
     font-weight: bold;
-    font-size: 2em;
+    font-size: 1.8em; /* Slightly reduced font size */
     text-decoration: none;
     transition: transform 0.3s ease, color 0.3s ease;
 }
@@ -47,7 +47,7 @@ body, html {
     color: #fb911f;
 }
 
-/* Styles pour la barre de navigation */
+/* Navigation Bar Styles */
 .navbar {
     display: flex;
     align-items: center;
@@ -57,12 +57,12 @@ body, html {
 
 .navbar li {
     list-style: none;
-    margin-left: 20px;
-    font-size: 1em;
+    margin-left: 15px; /* Reduced margin for mobile */
+    font-size: 0.9em; /* Adjusted font size for mobile */
 }
 
 .navbar a {
-    color: #000;
+    color: #fff; /* Changed to white for better contrast */
     text-decoration: none;
     font-weight: 700;
     transition: color 0.3s ease;
@@ -73,15 +73,15 @@ body, html {
     text-decoration: underline;
 }
 
-/* Styles pour les boutons de réservation */
+/* Reservation Button Styles */
 .btn-reserve {
     background-color: #fb911f;
     color: white;
-    padding: 10px 15px;
+    padding: 8px 12px; /* Adjusted padding for mobile */
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    margin-left: 20px;
+    margin-left: 15px; /* Reduced margin for mobile */
     transition: all 0.3s ease;
 }
 
@@ -92,15 +92,15 @@ body, html {
     transform: scale(1.05);
 }
 
-/* Style pour le contenu principal */
+/* Main Content Styles */
 main {
-    margin-top: 80px;
+    margin-top: 70px; /* Reduced margin for mobile */
 }
 
-/* Styles pour la bannière */
+/* Banner Styles */
 .banniere {
     width: 100%;
-    height: 100vh;
+    height: 80vh; /* Reduced height for better mobile view */
     position: relative;
     display: flex;
     flex-direction: column;
@@ -120,24 +120,25 @@ main {
 
 .banniere .contenu h2 {
     color: #fff;
-    font-size: 3em;
+    font-size: 2.5em; /* Reduced font size for mobile */
     text-transform: capitalize;
 }
 
 .contenu p {
     color: #fff;
-    font-size: 1.2em;
+    font-size: 1em; /* Reduced font size for mobile */
 }
 
-
+/* Button Container Styles */
 .buttons-container {
-    margin-top: 20px;
+    margin-top: 15px; /* Reduced margin for mobile */
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* Stack buttons vertically on mobile */
     gap: 10px;
+    width: 100%; /* Ensure buttons take full width on mobile */
 }
 
-/* Styles pour les boutons */
+/* Button Styles */
 .btn1, .btn2 {
     font-size: 1em;
     color: #fff;
@@ -149,6 +150,8 @@ main {
     transition: letter-spacing 0.5s;
     border: none;
     border-radius: 4px;
+    width: 100%; /* Make buttons full-width on mobile */
+    box-sizing: border-box;
 }
 
 .btn1 {
@@ -547,36 +550,28 @@ body {
     margin: 0;
     padding: 0;
 }
-
-#contact-form {
-    background-color: #f9f9f9;
-    padding: 40px 0;
+.btn-custom {
+    display: inline-block;
+    background-color: #fb911f; /* Couleur de fond du bouton */
+    color: white; /* Couleur du texte */
+    padding: 12px 24px; /* Espacement interne du bouton */
+    font-size: 16px; /* Taille de la police */
+    font-weight: bold; /* Poids de la police */
+    text-transform: uppercase; /* Transformation du texte en majuscule */
+    border: none; /* Suppression de la bordure */
+    border-radius: 5px; /* Bordures arrondies */
+    cursor: pointer; /* Curseur en forme de main */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Effet de transition pour les animations */
+    text-align: center;
+    text-decoration: none; /* Suppression de la décoration de texte */
+    margin-top: 20px; /* Marge au-dessus du bouton */
 }
 
-.container {
-    width: 80%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.btn-custom:hover {
+    background-color: #0056b3; /* Couleur de fond au survol */
+    transform: scale(1.05); /* Légère augmentation de la taille au survol */
 }
 
-h2 {
-    margin-top: 0;
-    color: #333;
-}
-
-p {
-    color: #666;
-}
-
-iframe {
-    width: 100%;
-    border: none;
-    border-radius: 4px;
-}
 
 
 /* Styles pour le pied de page */
@@ -615,151 +610,169 @@ iframe {
     color: #fb911f;
 }
 
-/* Styles responsive */
+/* Responsive Styles */
 @media (max-width: 768px) {
     .header {
-        font-size: 0.8em;
-        padding: 10px 5px;
+        font-size: 0.9em;
+        padding: 15px 10px;
     }
 
     .logo {
-        font-size: 1.5em;
+        font-size: 1.8em;
+        text-align: center;
+        margin-bottom: 10px;
     }
 
     .navbar li {
-        margin-left: 10px;
+        margin: 10px 0;
+        text-align: center;
     }
 
     .btn1, .btn2 {
-        font-size: 0.9em;
-        padding: 8px 16px;
+        font-size: 1em;
+        padding: 10px 20px;
+        width: 100%; /* Ensure buttons are full-width on small screens */
+        box-sizing: border-box;
     }
 
     .banniere .contenu h2 {
-        font-size: 2em;
+        font-size: 2.2em;
+        text-align: center;
+        margin: 20px 0;
     }
 
     .titre-texte {
-        font-size: 1.5em;
+        font-size: 1.6em;
+        text-align: center;
     }
 
     .box {
         max-width: 100%;
+        margin: 0 auto; /* Center the boxes on small screens */
     }
 
     .inputboite {
-        padding: 0;
+        padding: 5px;
+        width: 100%;
+        box-sizing: border-box; /* Ensure inputs fill the available space */
     }
 
     .titre-noir .titre-texte {
-        font-size: 1.5em;
+        font-size: 1.6em;
+        text-align: center;
+        margin: 15px 0;
     }
 
     .image-gallery {
         width: 100%;
+        margin-bottom: 20px; /* Add space between images */
     }
 }
-@media (max-width:350px) {
-   /* Styles communs pour le header */
-.header, .header.sticky {
-    padding: 10px 20px;
-}
 
-/* Styles pour le menu de navigation dans le header */
-.header .navbar {
-    display: none; /* Cacher par défaut */
-    height: 100vh; /* Assure que l'en-tête a une hauteur suffisante */
-    width: 100%;
-}
-
-/* Styles lorsque le menu de navigation est actif */
-.header .navbar.active {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: calc(100% -60px); /* Ajuster selon vos besoins */
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    background: #fff;
-    z-index: 1001; /* Assurez-vous qu'il est au-dessus d'autres éléments */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-/* Styles du header */
-header {
-    background: #fff; /* Fond blanc pour le header */
-    color: #333; /* Couleur du texte pour le contraste sur fond blanc */
-    padding: 10px;
-    position: relative;
-    z-index: 1000;
-    transition: background 0.3s ease;
-}
-
-/* Styles pour le header sticky */
-header.sticky {
-    background: #fff; /* Fond blanc lorsque sticky */
-    filter: invert(0); /* Retire l'inversion de couleur si active */
-}
-
-/* Styles pour le bouton de menu */
-.menutoggle {
-    position: relative;
-    width: 40px;
-    height: 40px;
-    background-image: url('./Capture d’écran 2024-08-20 030904.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    cursor: pointer;
-}
-
-/* Styles pour le bouton de menu lorsque actif */
-.menutoggle.active {
-    background-image: url('./image/close.png');
-    background-size: 30px;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-/* Styles pour la barre de navigation */
-.navbar {
-    display: flex;
-    justify-content: center;
-    transition: max-height 0.3s ease;
-    background: #fff; /* Fond blanc pour la barre de navigation */
-}
-
-/* Styles pour la liste dans la barre de navigation */
-.navbar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-/* Styles pour chaque élément de la liste dans la barre de navigation */
-.navbar ul li {
-    margin: 0 20px; /* Augmenter l'espace horizontal entre les éléments du menu */
-}
-
-/* Styles pour les liens dans la barre de navigation */
-.navbar ul li a {
-    color: #333; /* Couleur du texte pour contraste sur fond blanc */
-    text-decoration: none;
-    padding: 10px;
-}
-
-/* Styles lorsque la barre de navigation est active */
-.navbar.active {
-    max-height: 300px; /* Ajuster selon le contenu */
-}
-
+@media (max-width: 350px) {
+    /* Common header styles */
+    .header, .header.sticky {
+        padding: 10px 15px; /* Adjust padding for smaller screens */
+    }
+    
+    /* Navigation menu styles in header */
+    .header .navbar {
+        display: none; /* Hidden by default */
+        height: 100vh;
+        width: 100%;
+    }
+    
+    /* Styles when the navigation menu is active */
+    .header .navbar.active {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: calc(100% - 60px);
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        background: #fff;
+        z-index: 1001;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
+    /* Header styles */
+    header {
+        background: #fff;
+        color: #333;
+        padding: 10px;
+        position: relative;
+        z-index: 1000;
+        transition: background 0.3s ease;
+    }
+    
+    /* Sticky header styles */
+    header.sticky {
+        background: #fff;
+        filter: invert(0);
+    }
+    
+    /* Menu button styles */
+    .menutoggle {
+        position: relative;
+        width: 35px; /* Reduced size for smaller screens */
+        height: 35px;
+        background-image: url('./Capture d’écran 2024-08-20 030904.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+    }
+    
+    /* Active menu button styles */
+    .menutoggle.active {
+        background-image: url('./image/close.png');
+        background-size: 25px; /* Reduced size for smaller screens */
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    /* Navigation bar styles */
+    .navbar {
+        display: flex;
+        justify-content: center;
+        transition: max-height 0.3s ease;
+        background: #fff;
+    }
+    
+    /* Navigation list styles */
+    .navbar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column; /* Stack menu items vertically on small screens */
+        align-items: center;
+    }
+    
+    /* List item styles in the navigation bar */
+    .navbar ul li {
+        margin: 10px 0; /* Add vertical space between menu items */
+    }
+    
+    /* Link styles in the navigation bar */
+    .navbar ul li a {
+        color: #333;
+        text-decoration: none;
+        padding: 10px;
+        font-size: 1em; /* Ensure readability */
+    }
+    
+    /* Active navigation bar styles */
+    .navbar.active {
+        max-height: 100vh; /* Full screen for active navigation */
+    }
+    
     section {
-        padding: 20px;
+        padding: 15px; /* Adjust padding for smaller screens */
         margin: 10px 0;
     }
     
@@ -770,67 +783,105 @@ header.sticky {
     section:nth-of-type(even) {
         background: #e2e2e2;
     }
-    .banniere.contenu h2{
-        font-size: 2em;
-    }
-    .row.col50 img{
-        margin-left: 18%;
-    }
-    .contenu p:nth-child(2){
-        font-size: 2em;
-    }
-    .service{
-        margin-top: 0px;
-    }
-    .menu{
-        margin-top: 0px;
-    }
-    .row{
-       display: flex; 
-       flex-direction: column;
-    }
-    .temoignage h2{
-        font-size: 2em;
+    
+    .banniere.contenu h2 {
+        font-size: 1.8em; /* Reduced size for better fitting */
         text-align: center;
     }
-    .contactform{
-        margin-left: 25%;
+    
+    .row.col50 img {
+        margin-left: 10%; /* Adjust for better centering on small screens */
+        width: 80%; /* Ensure the image scales properly */
     }
-    .row.col50 {
-        width: 100%;
-        justify-content: center;
+    
+    .contenu p:nth-child(2) {
+        font-size: 1.5em; /* Reduced font size for better readability */
+    }
+    
+    .service, .menu {
+        margin-top: 0px;
+    }
+    
+    .row {
+        display: flex;
+        flex-direction: column; /* Stack rows vertically */
         align-items: center;
     }
-    .titre{
-        display: flex;
-        justify-content: center;
-        width:100%;
-      flex-direction: column;
-
+    
+    .temoignage h2 {
+        font-size: 1.8em; /* Adjusted for smaller screens */
+        text-align: center;
     }
-    .row{
-        flex-direction: column;
+    
+    #contact-form {
+        background-color: #f8f8f8;
+        padding: 30px 15px; /* Reduced padding for smaller screens */
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    #contact-form h2 {
+        font-size: 24px; /* Adjusted font size */
+        margin-bottom: 15px;
+        color: #333;
+    }
+    
+    #contact-form p {
+        font-size: 14px; /* Adjusted font size */
+        margin-bottom: 25px;
+        color: #666;
+    }
+    
+    #contact-form button {
+        display: inline-block;
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px; /* Adjusted padding */
+        font-size: 14px; /* Adjusted font size */
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        text-align: center;
+        text-decoration: none;
+    }
+    
+    #contact-form button:hover {
+        background-color: #0056b3;
+    }
+    
+    #contact-form iframe {
+        margin-top: 20px;
+        border-radius: 8px;
     }
 }
-@media (max-width:480px) {  
+
+@media (max-width: 480px) {  
     .banniere .contenu h2 {
-        font-size: 2.2em;
+        font-size: 2em; /* Slightly reduced for better fit on small screens */
         color: #fff;
+        text-align: center; /* Center-align the heading for balance */
+        margin: 10px 0; /* Add margin for spacing */
     }
+    
     .titre-texte {
-        font-size: 2rem;
+        font-size: 1.8rem; /* Slightly reduced font size */
         color: #000;
         font-weight: 300;
         text-transform: capitalize;
+        text-align: center; /* Center-align the text */
+        margin: 15px 0; /* Add margin for spacing */
     }
-    .temoignage h2 {
-        font-size: 1.1em;
-        text-align: center;
-    }
-    .temoignage p{
-       
-        text-align: center;
-    }
-
     
+    .temoignage h2 {
+        font-size: 1.4em; /* Adjusted for better readability */
+        text-align: center;
+        margin-bottom: 10px; /* Add margin for spacing */
+    }
+    
+    .temoignage p {
+        text-align: center;
+        font-size: 1rem; /* Ensure the text is readable on small screens */
+        margin: 0 10px; /* Add horizontal margin to prevent text from touching edges */
+    }
 }

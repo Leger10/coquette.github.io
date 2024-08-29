@@ -544,14 +544,7 @@
         </div>
             
 
-    <section class="témoignage " id="témoignage" >
-        <div class="titre">
-              <div class="titre-texte"></div>
-              <h1 class="titre-texte" style="text-align:center;"><span>T</span>émoignages</h1>
-                <h3>Que disent nos <span>C</span>lients????</h3> 
-            </div>
-        </div>
-
+   
         <div class="box-container">
             <div class="row-box" style="display: flex;justify-content: space-around;">
                 <div class="box">
@@ -662,14 +655,19 @@
   </div>
   </section>
 
-<section id="contact-form">
+  <section id="contact-form">
     <div class="container">
         <h2>Nous Contacter</h2>
         <p>Veuillez remplir le formulaire ci-dessous pour nous contacter.</p>
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScnO89iiopsQpI3e7xjLR5i9nMc0-KAk1l1T-TtM-B_6dly4g/viewform?embedded=true" width="640" height="1753" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
+        <button class="btn-custom" onclick="document.getElementById('google-form').scrollIntoView({ behavior: 'smooth' });">
+            Remplir le Formulaire
+        </button>
+        <div class="iframe-container">
+            <iframe id="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLScnO89iiopsQpI3e7xjLR5i9nMc0-KAk1l1T-TtM-B_6dly4g/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
+        </div>
     </div>
 </section>
-</section>
+
 <div>
     <p>&copy; 2024 Coquette du Faso - Salon de Coiffure. Tous droits réservés.</p>
   </div>
